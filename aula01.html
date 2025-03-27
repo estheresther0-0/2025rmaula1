@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> RM - ESTHER </title>
+  
+<style> 
+
+body {
+    background-image: url("file:///C:/Users/IFSul/Downloads/gatinhocoquettebg.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+  display: center;
+  justify-items: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;  
+ 
+}
+
+
+</style>
+
+
+</head>
+<body>
+    <div>𝓂𝓊𝓈𝒾𝒸𝒶s</div>
+    <audio id="musica" controls autoplay> 
+       <source src="resenha.mp3" type="audio/ogg">
+    </audio>
+    <audio id="musica2" controls autoplay>
+        <source src="pisada.mp3" type="audio/ogg">
+    </audio>
+
+    
+   <div>
+<br> 
+   <button onclick="tocar()"> play </button>  
+   <button onclick="pausar()"> pause </button>
+   <button onclick="mutar()"> mutar/desmutar </button> 
+   <button onclick="acelerar()">speed </button>
+   <button onclick="acelerarmais()"> + speed </button>
+   <button onclick="desacelerar()">sair do speed </button>
+   <button onclick="readystate()"> estado</button>
+   <button onclick="trocar()"> trocar musica</button>
+</div>
+    <script>   
+        
+        resenha = document.getElementById('musica');
+
+
+     function trocar(){
+        //resenha = document.getElementById('musica2');
+        if(resenha == document.getElementById('musica')){
+            resenha = document.getElementById('musica2');
+            
+        }
+        else{
+            resenha == document.getElementById('musica')
+        }
+    }
+
+
+    function tocar() {
+        //resenha = document.getElementById('musica');
+        resenha.play();
+    }
+    function pausar(){
+        //resenha = document.getElementById('musica');
+        resenha.pause();
+    }
+    function mutar(){
+        //resenha = document.getElementById('musica');
+        resenha.muted = !resenha.muted;
+    }
+    function acelerar(){
+        //resenha = document.getElementById('musica');
+        resenha.playbackRate = 2.0 ;
+    }
+    function acelerarmais(){
+        //resenha = document.getElementById('musica');
+        resenha.playbackRate = 5.0 ;
+    }
+    function desacelerar(){
+        //resenha = document.getElementById('musica');
+        resenha.playbackRate = 1.0 ;
+    }
+    function readystate(){
+        //resenha = document.getElementById('musica');
+        alert(resenha.readyState);
+    }
+    
+
+
+    </script>
+    <div class="imagem">
+
+        <a href="#"><img src="" width="10%" height="10%"></a>
+
+    </div>
+
+    
+</body>
+</html>
